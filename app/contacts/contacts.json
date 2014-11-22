@@ -1,0 +1,43 @@
+[
+    {
+		"id" : 1,
+        "address": "1234 Rue Sherbrooke",
+		"city": "Montreal",
+	    "firstName" : "Jane",
+		"lastName" : "Smith",
+		"postal" : "L3F 8K3",
+		"province": "Quebec",
+        "telephone": "416 723 8812"
+    },
+	{
+		"id" : 2,
+        "address": "5650 Yonge Street",
+		"city": "Toronto",
+	    "firstName" : "Leo",
+		"lastName" : "Joe",
+		"postal" : "M2M 7J2",
+		"province": "Ontario",
+        "telephone": "514 134 1232"
+    },
+	{
+		"id" : 3,
+        "address": "5611 King Street",
+		"city": "Ottawa",
+	    "firstName" : "George",
+		"lastName" : "Wang",
+		"postal" : "I3T 8N2",
+		"province": "Ontario",
+        "telephone": "647 244 8792"
+    },
+	{
+		"id" : 4,
+        "address": "111 Lowrence Street",
+		"city": "Markham",
+	    "firstName" : "Tim",
+		"lastName" : "Hortons",
+		"postal" : "I31 H13",
+		"province": "Ontario",
+        "telephone": "241 421 2456"
+    }
+
+]

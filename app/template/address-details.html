@@ -1,0 +1,98 @@
+
+<form name="ngForm" role="form" novalidate=>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" ng-if="!person.id">Add a contact</h3>
+                <h3 class="modal-title" ng-if="person.id">Edit a contact</h3>
+                <i class="glyphicon glyphicon-remove pull-right" ng-click="cancel()" ></i>
+            </div>
+
+            <div class="modal-body">
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control"
+                                                     ng-model="person.firstName" name="firstName" id="firstName"
+                                                     placeholder="First name" required="required" />
+
+                            <ul class="validation-error-message" ng-show="ngForm.submitted &&  ngForm.firstName.$invalid">
+                                <li ng-show="ngForm.firstName.$error.required">First name  is required</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6"><input type="text" class="form-control"
+                                                     ng-model="person.lastName" name="lastName" id="lastName"
+                                                     placeholder="Last name" required="required"/>
+                            <ul class="validation-error-message" ng-show="ngForm.submitted &&  ngForm.lastName.$invalid">
+                                <li ng-show="ngForm.lastName.$error.required" > Last name  is required</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                <div class="row form-group">
+                    <div class="col-md-12"><input type="text" class="form-control"
+                                                  ng-model="person.address" name="address" id="address"
+                                                  placeholder="Street address" required="required"/>
+
+                        <ul class="validation-error-message" ng-show="ngForm.submitted &&  ngForm.address.$invalid">
+                            <li ng-show="ngForm.address.$error.required" translate> Street address  is required</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row form-group">
+
+                    <div class="col-md-4"><input type="text" class="form-control"
+                                                 ng-model="person.city" name="city" id="city"
+                                                 placeholder="City" required="required"/>
+
+
+                        <ul class="validation-error-message" ng-show="ngForm.submitted &&  ngForm.city.$invalid">
+                            <li ng-show="ngForm.city.$error.required">City  is required</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                            <select  class="form-control" ng-model="person.province" name="province" id="province" required="required" ng-options="item for item in provinceChoices">
+                                <option value=""> Province </option>
+                            </select>
+
+
+                        <ul class="validation-error-message" ng-show="ngForm.submitted &&  ngForm.province.$invalid">
+                            <li ng-show="ngForm.province.$error.required">Province  is required</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4"><input type="text" class="form-control"
+                                                 placeholder="Post code"
+                                                 ng-model="person.postal" name="postal" id="postal"
+                                                 required="required" ui-mask="A9A 9A9" />
+
+                        <ul class="validation-error-message" ng-show="ngForm.submitted &&  ngForm.postal.$invalid">
+                            <li ng-show="ngForm.postal.$error.required">Post code  is required</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="row form-group">
+
+                    <div class="col-md-4"><input type="text" class="form-control"
+                                                 ng-model="person.telephone" name="phone" id="phone"
+                                                 placeholder="Phone number" required="required"/>
+
+                        <ul class="validation-error-message" ng-show="ngForm.submitted &&  ngForm.phone.$invalid">
+                            <li ng-show="ngForm.phone.$error.required">Phone number is required</li>
+                        </ul>
+                    </div>
+                </div>
+
+             </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="ok(ngForm)" submit-button enable-button="ngForm.$valid">Save Contact</button>
+                <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</form>

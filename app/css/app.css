@@ -1,0 +1,46 @@
+/* app css stylesheet */
+
+header {
+    background-color: rgb(124, 194, 53);
+    color: #fff;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    cursor:pointer;
+}
+
+/* align icon */
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.right-addon input { padding-right: 30px; }
+
+.glyphicon {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+.modal-title{
+    display: inline;
+}
+
+ul.validation-error-message{
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    color: #333;
+    background-color: #fde9ed;
+    font-size: 13px;
+}
+
+ul.validation-error-message li{
+    list-style-type: none;
+}
+
